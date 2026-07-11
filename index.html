@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text"  id="num1">
+   
+   <select  id="opr">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+   </select>
+
+ 
+
+   <button onclick="cal()">submit</button>
+   <p id="r"></p>
+
+   
+    
+    
+
+
+
+    <script>
+        function cal(){
+           a = document.getElementById('num1').value
+           opr = document.getElementById('opr').value 
+           b = document.getElementById('num2').value
+
+           result= 0
+           if(opr=='+'){
+            result= Number(a)+Number(b)
+           }
+           else if(opr=='-'){
+            result=Number(a)-Number(b)
+           }
+           else if(opr=='*'){
+            result=Number(a)*Number(b)
+           }
+           else{
+            result=Number(a)/Number(b)
+           }
+
+        document.getElementById('r').innerText = result
+
+
+           
+           
+
+        }
+    </script>
+</body>
+</html>
